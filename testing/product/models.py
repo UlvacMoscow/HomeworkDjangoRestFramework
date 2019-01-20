@@ -1,24 +1,23 @@
 from django.db import models
 
-
-
+# Create your models here.
 class Category(models.Model):
     #Ring, Earrings, NEcklase
-    type = models.CharField(verbose_name="тип украшения", max_length=150)
+    category = models.CharField(verbose_name="тип украшения", max_length=150)
 
     def __str__(self):
         return self.type
 
 class Metal(models.Model):
-    type_metal = models.CharField(verbose_name="металл", max_length=200)
+    metal = models.CharField(verbose_name="металл", max_length=200)
 
     def __str__(self):
         return self.type_metal
 
 class Stone(models.Model):
-    type_stone = models.CharField(verbose_name="камень", max_length=200)
+    stone = models.CharField(verbose_name="камень", max_length=200)
 
-class Item(models.Model):
+class Product(models.Model):
     title = models.CharField(verbose_name="название украшения", max_length=255)
     category = models.ForeignKey(Category, verbose_name="тип украшения", on_delete=models.CASCADE)
     metal = models.ForeignKey(Metal, verbose_name="тип металла", on_delete=models.CASCADE)
