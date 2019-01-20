@@ -1,6 +1,6 @@
 # app-shop-vue
 
-> study project
+> A Vue.js project
 
 ## Build Setup
 

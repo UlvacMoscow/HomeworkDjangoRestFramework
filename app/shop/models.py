@@ -1,3 +1,14 @@
 from django.db import models
 
-# Create your models here.
+class Category():
+    pass
+
+
+class Ring():
+    pass
+
+class Earrings():
+    pass
+
+class Necklace():
+    pass
