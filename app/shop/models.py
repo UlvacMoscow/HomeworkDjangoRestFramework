@@ -1,5 +1,7 @@
 from django.db import models
 
+
+
 class Category(models.Model):
     #Ring, Earrings, NEcklase
     type = models.CharField(verbose_name="тип украшения", max_length=150)

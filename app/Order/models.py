@@ -1,4 +1,8 @@
 from django.db import models
+from User.models import User
+from shop.models import Item
+
+
 
 class Order(models.Model):
     decoration = models.ForeignKey(Item)
