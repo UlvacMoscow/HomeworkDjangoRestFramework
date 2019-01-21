@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block info %}
+<table class="table">
+<tr><td>product</td><td>{{ object.product }}</td></tr>
+<tr><td>customer</td><td>{{ object.customer }}</td></tr>
+<tr><td>creater</td><td>{{ object.creater }}</td></tr>
+</table>
+
+{% endblock %}

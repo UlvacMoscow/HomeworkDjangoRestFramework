@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'shop_products_list' %}">Products Listing</a></p>
+<table class="table">
+<tr><td>Category</td><td>{{ object.Category }}</td></tr>
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>metal</td><td>{{ object.metal }}</td></tr>
+<tr><td>stone</td><td>{{ object.stone }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit Products</a>
+
+{% endblock %}
