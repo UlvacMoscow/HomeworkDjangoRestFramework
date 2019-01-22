@@ -11,10 +11,13 @@
 </tr>
 {% for object in object_list %}
 <tr>
-    <td>A {{object.pk}}</td>
-    <td>B {{ object.name }}</td>
+    <td> {{object.pk}}</td>
+    <td> {{ object.name }}</td>
     <td> {{ object.has_orders }}</td>
-    <td> {{ object.give_products }}</td>
+    <td> {% for product in object.list_orders %}
+            {{ forloop.counter }}. {{ product }}
+         {% endfor %}
+    </td>
 
 </tr>
 {% endfor %}

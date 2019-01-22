@@ -1,5 +1,5 @@
 from django.db import models
-from order.models import order
+# from order.models import order
 
 
 class Customer(models.Model):
@@ -15,7 +15,8 @@ class Customer(models.Model):
         return self.customers.all().count()
 
     #написать метод который выводил список заказанных товаров product
-    def give_products(self):
-        pass
+    def list_orders(self):
+        return self.customers.all()
+
         # return self.products.all()
         # return self.order.all().count()

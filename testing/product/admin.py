@@ -22,7 +22,7 @@ class CustomerAdminForm(forms.ModelForm):
 
 class CustomerAdmin(admin.ModelAdmin):
     form = CustomerAdminForm
-    list_display = ['name', 'phone', 'email', 'has_orders', 'give_products']
+    list_display = ['name', 'phone', 'email', 'has_orders', 'list_orders']
     readonly_fields = ['name', 'phone', 'email']
 
 admin.site.register(Customer, CustomerAdmin)
